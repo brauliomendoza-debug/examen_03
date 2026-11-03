@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IKOMI PERÚ — Sitio corporativo con Next.js
 
-## Getting Started
+**Autor:** Mendoza Santos, Braulio Rodolfo  
+**Curso:** Desarrollo de Aplicaciones Web Avanzado: FullStack  
+**Demo desplegada:** pendiente de despliegue  
+**Repositorio:** agregar URL de GitHub
 
-First, run the development server:
+## Instalación y ejecución
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre `http://localhost:3000`. Para compilar y servir la versión de producción:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Rutas
 
-## Learn More
+- `/` — Inicio
+- `/nosotros` — Información de la empresa
+- `/servicios` — Servicios
+- `/productos` — Catálogo
+- `/productos/[slug]` — Detalle de un producto
+- `/marcas` — Marcas
+- `/contacto` — Formulario visual de contacto
+- Ruta inexistente — Página 404 personalizada
 
-To learn more about Next.js, take a look at the following resources:
+## Árbol de componentes (S = Server, C = Client)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+RootLayout (S)
+├─ Navbar (C) — ruta activa y menú responsive
+├─ {children}
+│  ├─ HomePage (S)
+│  │  ├─ Hero (S)
+│  │  ├─ SectionTitle (S)
+│  │  └─ ProductCard (S)
+│  ├─ NosotrosPage (S)
+│  ├─ ServiciosPage (S)
+│  ├─ ProductosPage (S)
+│  ├─ ProductDetailPage (S)
+│  ├─ MarcasPage (S)
+│  └─ ContactoPage (S)
+│     └─ ContactForm (C) — validación visual del formulario
+├─ Footer (S)
+└─ NotFound (S)
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Datos e imágenes
 
-## Deploy on Vercel
+Los productos, precios, descripciones e imágenes son datos de demostración. Las imágenes se cargan desde Unsplash. Para la entrega, reemplázalos por información y fotografías autorizadas y representativas de IKOMI; evita presentar contenido de muestra como información oficial.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Evidencias
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Guardar en `evidencias/` las capturas del build, el experimento `Link` vs. `<a>` y las pruebas responsive de 375 px, 768 px y 1280 px.
