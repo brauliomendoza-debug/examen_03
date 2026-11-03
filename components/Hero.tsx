@@ -6,8 +6,8 @@ export default function Hero() {
     <section className="hero-section">
       <div className="hero-overlay" />
       <Image
-        src="https://images.unsplash.com/photo-1605559424843-9e4c179364a4?auto=format&fit=crop&w=1600&q=80"
-        alt="Repuestos y piezas para camiones"
+        src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1600&q=80"
+        alt="Camión de carga en carretera"
         fill
         priority
         className="hero-image"

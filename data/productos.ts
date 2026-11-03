@@ -76,7 +76,7 @@ export const productos: Producto[] = [
     description:
       "Componente clave para mejorar potencia, respuesta y rendimiento del motor del camión.",
     image:
-      "https://images.unsplash.com/photo-1593941707882-a5bac6861d75?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&q=80",
     specs: ["Rendimiento optimizado", "Mayor respuesta", "Repuestos originales"],
   },
 ];
