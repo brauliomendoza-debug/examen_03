@@ -25,9 +25,9 @@ export default function ProductCard({ product }: ProductCardProps) {
         <p>{product.description}</p>
 
         <div className="product-footer">
-          <strong>{product.price}</strong>
+          <strong>Consultar disponibilidad</strong>
           <Link href={`/productos/${product.slug}`} className="product-link">
-            Ver detalle
+            Ver pieza
           </Link>
         </div>
       </div>

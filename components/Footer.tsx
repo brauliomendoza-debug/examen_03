@@ -31,7 +31,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        © 2026 IKOMI PERÚ — Repuestos de Korea y Japón
+        Sitio académico de demostración · IKOMI PERÚ
       </div>
     </footer>
   );

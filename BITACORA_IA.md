@@ -46,6 +46,13 @@ Herramienta(s) usada(s): asistente IA de esta conversación
 - **Decisión:** Completar
 - **Justificación:** Completar con mis palabras.
 
+## Entrada 7 — 2026-11-03
+- **Objetivo:** Acercar el diseño de la portada al sitio de referencia sin copiar su contenido.
+- **Prompt utilizado:** “osea haz que sea lo más parecido pero que no haya problemas de plagio o asi”
+- **Resumen de la respuesta:** Se reorganizó la portada como un catálogo original por sistemas, con orientación de compra, marcas de vehículos, referencias de muestra y una llamada a contacto. Se usaron textos propios, otra paleta y se eliminaron estadísticas, precios y afirmaciones no verificadas.
+- **Decisión:** Completar
+- **Justificación:** Completar con mis palabras.
+
 ---
 
 ## Errores de la IA detectados y corregidos

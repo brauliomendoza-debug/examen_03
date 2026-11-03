@@ -53,7 +53,7 @@ RootLayout (S)
 
 ## Datos e imágenes
 
-Los productos, precios, descripciones e imágenes son datos de demostración. Las imágenes se cargan desde Unsplash. Para la entrega, reemplázalos por información y fotografías autorizadas y representativas de IKOMI; evita presentar contenido de muestra como información oficial.
+La portada usa una organización propia inspirada en la navegación de un catálogo automotriz: acceso por sistemas, orientación de compra y referencias de muestra. Los textos y la composición son originales, no una copia literal del sitio de referencia. Los productos y sus imágenes son demostrativos y se cargan desde Unsplash; reemplázalos por información y fotografías autorizadas antes de presentar la web como catálogo real.
 
 ## Evidencias
 

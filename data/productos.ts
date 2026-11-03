@@ -2,7 +2,6 @@ export type Producto = {
   slug: string;
   name: string;
   category: string;
-  price: string;
   description: string;
   image: string;
   specs: string[];
@@ -13,70 +12,68 @@ export const productos: Producto[] = [
     slug: "disco-de-freno",
     name: "Disco de freno",
     category: "Frenos",
-    price: "S/ 320",
     description:
-      "Disco de freno de alto rendimiento para camiones pesados y flotas de transporte.",
+      "Referencia de ejemplo para consultar componentes del sistema de freno de una unidad.",
     image:
       "https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=1200&q=80",
-    specs: ["Material: hierro fundido", "Uso: urbano y carretera", "Garantía: 6 meses"],
+    specs: [
+      "Verificar diámetro y montaje",
+      "Confirmar aplicación por modelo y año",
+      "Imagen referencial",
+    ],
   },
   {
     slug: "filtro-de-aceite",
     name: "Filtro de aceite",
     category: "Filtración",
-    price: "S/ 85",
     description:
-      "Filtro de aceite compatible con motores de servicio pesado para mayor protección del motor.",
+      "Referencia de ejemplo para ubicar filtros y componentes de mantenimiento del motor.",
     image:
       "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1200&q=80",
     specs: [
-      "Alta eficiencia",
-      "Compatibilidad: varios modelos",
-      "Mantenimiento recomendado cada 10,000 km",
+      "Confirmar código de pieza",
+      "Verificar medidas y rosca",
+      "Aplicación por validar",
     ],
   },
   {
     slug: "manguera-de-freno",
     name: "Manguera de freno",
     category: "Sistema de freno",
-    price: "S/ 180",
     description:
-      "Manguera reforzada diseñada para soportar presión, vibración y desgaste constante.",
+      "Referencia de ejemplo para solicitar componentes de conexión del sistema de freno.",
     image:
       "https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&q=80",
-    specs: ["Reforzada", "Alta resistencia térmica", "Instalación rápida"],
+    specs: ["Confirmar largo y terminales", "Verificar especificación requerida", "Imagen referencial"],
   },
   {
     slug: "kit-de-embrague",
     name: "Kit de embrague",
     category: "Transmisión",
-    price: "S/ 980",
     description:
-      "Kit completo para renovación del sistema de embrague con durabilidad y desempeño confiable.",
+      "Referencia de ejemplo para consultar piezas del embrague y tren de transmisión.",
     image:
       "https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=1200&q=80",
-    specs: ["Completo", "Alta fricción", "Uso pesado"],
+    specs: ["Confirmar código de motor", "Verificar estrías y medidas", "Contenido por confirmar"],
   },
   {
     slug: "amortiguador",
     name: "Amortiguador",
     category: "Suspensión",
-    price: "S/ 420",
     description:
-      "Solución para mejorar el control y la estabilidad del vehículo con cargas variables.",
+      "Referencia de ejemplo para consultar componentes de suspensión según aplicación.",
     image:
       "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1200&q=80",
-    specs: ["Estabilidad", "Carga soportada", "Durabilidad mejorada"],
+    specs: ["Confirmar puntos de montaje", "Verificar dimensiones", "Aplicación por validar"],
   },
   {
     slug: "turbocompresor",
     name: "Turbo compresor",
     category: "Motor",
-    price: "S/ 1,350",
     description:
-      "Componente clave para mejorar potencia, respuesta y rendimiento del motor del camión.",
+      "Referencia de ejemplo para consultar componentes del motor por código y aplicación.",
     image:
       "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&q=80",
-    specs: ["Rendimiento optimizado", "Mayor respuesta", "Repuestos originales"],
+    specs: ["Confirmar código de motor", "Verificar número de pieza", "Imagen referencial"],
   },
 ];

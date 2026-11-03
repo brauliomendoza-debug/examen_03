@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { productos } from "@/data/productos";
 
@@ -45,7 +46,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
         <div className="product-detail-info">
           <span className="product-category">{product.category}</span>
           <h1>{product.name}</h1>
-          <p className="product-price">{product.price}</p>
+          <p className="product-price">Consulta precio y disponibilidad</p>
           <p>{product.description}</p>
 
           <ul className="spec-list">
@@ -53,6 +54,9 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
               <li key={spec}>{spec}</li>
             ))}
           </ul>
+          <Link href="/contacto" className="primary-button">
+            Consultar esta pieza
+          </Link>
         </div>
       </div>
     </main>
