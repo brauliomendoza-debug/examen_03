@@ -2,7 +2,7 @@
 
 **Autor:** Mendoza Santos, Braulio Rodolfo  
 **Curso:** Desarrollo de Aplicaciones Web Avanzado: FullStack  
-**Demo desplegada:** https://examen-03-78b9.onrender.com/productos
+**Demo desplegada:** [Abrir sitio en Render](https://examen-03-78b9.onrender.com/productos)
 **Repositorio:** https://github.com/brauliomendoza-debug/examen_03
 
 ## Despliegue en Render
@@ -14,7 +14,7 @@ Para desplegar:
 1. Confirma los cambios y súbelos a la rama `master` de GitHub.
 2. En Render, selecciona **New +** → **Blueprint** y conecta el repositorio `brauliomendoza-debug/examen_03`.
 3. Render leerá `render.yaml`; revisa la configuración y crea el servicio.
-4. Cuando termine la compilación, abre la URL que Render asigna y actualiza aquí **Demo desplegada**.
+4. Cuando termine la compilación, abre la URL de Render indicada en **Demo desplegada** y verifica que el sitio cargue.
 
 No se requieren variables de entorno para esta versión.
 
