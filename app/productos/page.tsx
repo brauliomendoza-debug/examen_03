@@ -10,15 +10,19 @@ export const metadata: Metadata = {
 
 export default function ProductosPage() {
   return (
-    <main className="page-shell">
+    <main className="mx-auto w-[min(1180px,calc(100%-48px))] py-16 max-[700px]:w-[calc(100%-36px)] max-[700px]:py-12">
       <SectionTitle
         title="PRODUCTOS"
         subtitle="Repuestos disponibles para camiones y equipos pesados"
       />
 
-      <div className="card-grid three-columns">
-        {productos.map((producto) => (
-          <ProductCard key={producto.slug} product={producto} />
+      <div className="grid grid-cols-3 gap-5 max-[960px]:grid-cols-2 max-[700px]:grid-cols-1">
+        {productos.map((producto, index) => (
+          <ProductCard
+            key={producto.slug}
+            product={producto}
+            eager={index === 0}
+          />
         ))}
       </div>
     </main>

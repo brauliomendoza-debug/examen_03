@@ -20,7 +20,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="es" className={raleway.variable}>
+    <html
+      lang="es"
+      className={raleway.variable}
+      data-scroll-behavior="smooth"
+    >
       <body>
         <Navbar />
         <div id="main-content">{children}</div>

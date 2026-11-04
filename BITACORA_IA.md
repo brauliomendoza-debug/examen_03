@@ -1,6 +1,6 @@
 # BITÁCORA DE USO DE IA — ikomi-next-mendoza
 
-Herramienta(s) usada(s): asistente IA de esta conversación
+Herramienta(s) usada(s): asistente IA de esta conversación, copilot, gpt-luna
 
 > Completa **Decisión** y **Justificación** con lo que realmente piensas. No conserves ejemplos de errores si no coinciden con lo que observaste en tu proyecto.
 
@@ -8,96 +8,63 @@ Herramienta(s) usada(s): asistente IA de esta conversación
 - **Objetivo:** Revisar el contexto de la evaluación y recibir orientación para organizar el trabajo.
 - **Prompt utilizado:** “mira el .md de contexto y ayudame hacer mi examen de manera satisfactoria”
 - **Resumen de la respuesta:** Se revisó la rúbrica, las páginas requeridas, los entregables y el estado inicial del proyecto.
-- **Decisión:** Completar
-- **Justificación:** Completar con mis palabras.
+- **Decisión:** Aceptado
+- **Justificación:** La usé como orientación, pero decidí hacer el trabajo paso a paso.
 
 ## Entrada 2 — 2026-11-03
 - **Objetivo:** Aclarar que la ayuda debía ser de guía y no modificar el proyecto en ese momento.
 - **Prompt utilizado:** “no modifiques nada solo guiame en la creacion de todo esto”
 - **Resumen de la respuesta:** Se explicó la estructura de archivos y el contenido esperado de las páginas, componentes, datos y estilos.
-- **Decisión:** Completar
-- **Justificación:** Completar con mis palabras.
+- **Decisión:** Aceptado
+- **Justificación:** Quería mantener el control de los cambios y decidir qué hacer.
 
 ## Entrada 3 — 2026-11-03
 - **Objetivo:** Solicitar el detalle de la opción A, es decir, la estructura y los archivos del proyecto.
 - **Prompt utilizado:** “opción A”
 - **Resumen de la respuesta:** Se describió el contenido base de rutas, componentes, datos, estilos y documentación.
-- **Decisión:** Completar
-- **Justificación:** Completar con mis palabras.
+- **Decisión:** Aceptado
+- **Justificación:** Elegí la opción para ver las carpetas y archivos necesarios.
 
 ## Entrada 4 — 2026-11-03
 - **Objetivo:** Pedir que se prepare la implementación del sitio indicado.
 - **Prompt utilizado:** “crea eso de todo lo que me diste”
 - **Resumen de la respuesta:** Se crearon componentes, datos y páginas con App Router; se agregaron estilos responsive, metadata, navegación y detalle dinámico.
-- **Decisión:** Completar
-- **Justificación:** Completar con mis palabras.
+- **Decisión:** Modificado
+- **Justificación:** Quería ver cómo quedaba la implementación y, a partir de eso, decidir qué cambios pedir.
 
 ## Entrada 5 — 2026-11-03
 - **Objetivo:** Asegurar que el proceso incluya commits progresivos.
 - **Prompt utilizado:** “espera aun falta hacer los commits”
-- **Resumen de la respuesta:** Se comprobó que el repositorio tenía el commit inicial y que faltaba organizar los cambios en commits descriptivos.
-- **Decisión:** Completar
-- **Justificación:** Completar con mis palabras.
+- **Resumen de la respuesta:** Se organizaron los cambios iniciales en ocho commits progresivos con mensajes descriptivos en español y se subieron a GitHub. Los cambios hechos después de esos commits todavía están pendientes de registrar.
+- **Decisión:** Aceptado
+- **Justificación:** Quería mostrar el avance del trabajo por partes y saber qué cambios hice en cada etapa.
 
 ## Entrada 6 — 2026-11-03
-- **Objetivo:** Continuar el trabajo después de las interrupciones de edición.
-- **Prompt utilizado:** “sigue”
-- **Resumen de la respuesta:** Se terminó la página de inicio y los estilos, se configuró el uso permitido de imágenes remotas y se corrigieron las imágenes y el formulario.
-- **Decisión:** Completar
-- **Justificación:** Completar con mis palabras.
-
-## Entrada 7 — 2026-11-03
-- **Objetivo:** Acercar el diseño de la portada al sitio de referencia sin copiar su contenido.
-- **Prompt utilizado:** “osea haz que sea lo más parecido pero que no haya problemas de plagio o asi”
-- **Resumen de la respuesta:** Se reorganizó la portada como un catálogo original por sistemas, con orientación de compra, marcas de vehículos, referencias de muestra y una llamada a contacto. Se usaron textos propios, otra paleta y se eliminaron estadísticas, precios y afirmaciones no verificadas.
-- **Decisión:** Completar
-- **Justificación:** Completar con mis palabras.
+- **Objetivo:** Agregar el mapa de ubicación a la página de contacto.
+- **Prompt utilizado:** “en la parte de contactano puedes agregar el mapa”
+- **Resumen de la respuesta:** Se añadió un mapa incrustado de Google Maps para la dirección publicada de IKOMI, con enlace para abrir las indicaciones.
+- **Decisión:** Aceptado
+- **Justificación:** Lo agregué como un elemento decorativo en la página de contacto.
 
 ---
 
 ## Errores de la IA detectados y corregidos
 
-### Caso 1 — Etiquetas `<img>` en páginas
-- **Qué propuso la IA:** La primera versión de la página de marcas y nosotros (y la sección de marcas de inicio) usaba etiquetas `<img>`.
-- **Por qué era inadecuado:** La evaluación pide usar `next/image`. También se necesitaba declarar el host remoto permitido en `next.config.ts`.
+### Caso 1 — URL de imagen que devolvía 404
+- **Qué propuso la IA:** Algunas imágenes de Unsplash usaban URL que no cargaban.
+- **Por qué era inadecuado:** La imagen del hero y la del turbocompresor no se podían mostrar porque sus URL devolvían 404.
 - **ANTES:**
   ```tsx
-  <img src={marca.image} alt={marca.name} className="brand-image" />
+  src="https://images.unsplash.com/photo-1605559424843-9e4c179364a4?auto=format&fit=crop&w=1600&q=80"
   ```
 - **DESPUÉS:**
   ```tsx
-  <Image
-    src={marca.image}
-    alt={`Vehículo representativo de ${marca.name}`}
-    width={800}
-    height={600}
-    sizes="(max-width: 700px) 100vw, (max-width: 960px) 50vw, 25vw"
-    className="brand-image"
-  />
+  src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1600&q=80"
   ```
-- **Explicación de la corrección:** `next/image` permite optimización y dimensiones explícitas. El dominio remoto también debe permitirse mediante `images.remotePatterns`.
-
-### Caso 2 — Formulario sin comportamiento de envío
-- **Qué propuso la IA:** La primera versión del formulario tenía un botón `submit`, pero ningún controlador para procesar el evento.
-- **Por qué era inadecuado:** El formulario podía realizar un envío nativo sin que la aplicación mostrara un resultado. Como esta evaluación solo requiere la interfaz, se agregó validación del navegador y una confirmación visual, sin afirmar que los datos se envían a un servidor.
-- **ANTES:**
-  ```tsx
-  <form className="contact-form">
-    {/* campos */}
-    <button type="submit">Enviar mensaje</button>
-  </form>
-  ```
-- **DESPUÉS:**
-  ```tsx
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setSubmitted(true);
-  }
-  ```
-- **Explicación de la corrección:** El componente ahora controla el evento y muestra un estado local. Para enviar mensajes de verdad todavía haría falta conectarlo a un backend o servicio.
+- **Explicación de la corrección:** Se reemplazó la URL que fallaba por otra imagen que sí cargaba. También se corrigió la URL de imagen del turbocompresor en los datos de productos.
 
 ---
 
 ## Reflexión (máx. 200 palabras)
 
-Escribir con mis palabras: ¿qué parte entiendo mejor gracias a la IA y qué tuve que razonar o comprobar por mi cuenta? Incluir un ejemplo concreto de este proyecto.
+Aprendí que con `Link` no se recarga toda la página y con `<a>` se vuelve a cargar toda la página. Lo comprobé mirando Network durante la prueba.
