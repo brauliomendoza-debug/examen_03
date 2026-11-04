@@ -2,7 +2,7 @@
 
 **Autor:** Mendoza Santos, Braulio Rodolfo  
 **Curso:** Desarrollo de Aplicaciones Web Avanzado: FullStack  
-**Demo desplegada:** pendiente de despliegue en Render
+**Demo desplegada:** https://examen-03-78b9.onrender.com/productos
 **Repositorio:** https://github.com/brauliomendoza-debug/examen_03
 
 ## Despliegue en Render
